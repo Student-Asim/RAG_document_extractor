@@ -1,0 +1,141 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+  color: white;
+  position: relative;
+  z-index: 1100;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin-left: auto;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu-dot {
+  cursor: pointer;
+  font-size: 24px;
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1200;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -350px;
+  width: 300px;
+  height: 100%;
+  background-color: #2c2c2c;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  transition: left 0.3s ease;
+  z-index: 1000;
+  padding: 20px;
+  /* remove space-between so bottom icons respect margin */
+  justify-content: flex-start;  
+}
+
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar-section {
+  overflow-y: auto;
+  margin-bottom: 20px;
+  max-height: 45%;
+}
+
+.sidebar-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-section li {
+  margin: 10px 0;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.5s ease;
+}
+
+/* Slide in animation on scroll */
+.sidebar-section li.slide-item {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.top-section {
+  border-bottom: 1px solid #444;
+  padding-bottom: 10px;
+}
+
+.bottom-section {
+  padding-top: 10px;
+}
+
+/* Bottom icons horizontally aligned */
+.sidebar-bottom-icons {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;   /* move icons 20px up from bottom */
+  padding-top: 10px;
+  border-top: 1px solid #444;
+}
+
+
+
+.sidebar-bottom-icons .icon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.sidebar-bottom-icons .icon:hover {
+  color: #1e90ff;
+}
+
+/* Overlay */
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;   /* match sidebar width */
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 900;
+}
+
+
+/* Scrollbar styling */
+.sidebar-section::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar-section::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 3px;
+}
+
+.sidebar-section::-webkit-scrollbar-track {
+  background-color: #2c2c2c;
+}

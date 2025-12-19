@@ -1,0 +1,11 @@
+FastAPI
+requests
+uvicorn
+langchain
+python-dotenv
+openai
+google-api-python-client
+pinecone-client
+langsmith
+react
+file

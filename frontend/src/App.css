@@ -1,0 +1,14 @@
+.main-container {
+  transition: all 0.3s ease;
+  margin-left: 0;
+  background-color: #121212;
+  min-height: 100vh;
+  color: white;
+  padding: 20px;
+  width: 100%;
+}
+
+.main-container.shifted {
+  margin-left: 300px; /* matches sidebar width */
+  width: calc(100% - 300px);
+}

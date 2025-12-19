@@ -1,0 +1,15 @@
+langchain
+langchain-community
+langchain-openai
+langchain-text-splitters
+pypdf
+faiss-cpu
+python-dotenv
+fastapi
+uvicorn
+langchain-pinecone
+langchain-google-genai
+json
+shutil
+os
+langchain_core
